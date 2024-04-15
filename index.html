@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tax Calculator</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="tax-calculator-container">
+            <form id="taxCalculatorForm">
+                <div class="container mt-5">
+                    <form id="taxCalculatorForm">
+                        <div class="form-group">
+                            <label for="grossIncome">Enter gross Annual Income:</label>
+                            <input type="number" class="form-control" id="grossIncome"
+                                placeholder="Enter gross Annual Income" pattern="[0-9]*" />
+                            <div class="error-icon" id="grossIncomeError" data-toggle="tooltip"
+                                title="Please enter a valid number"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="extraIncome">Enter extra Income:</label>
+                            <input type="number" class="form-control" id="extraIncome"
+                                placeholder="Enter extra Income from other source" pattern="[0-9]*"/>
+                            <div class="error-icon" id="extraIncomeError" data-toggle="tooltip"
+                                title="Please enter a valid number"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Enter the age group:</label>
+                            <input type="number" class="form-control" pattern="[0-9]*"/>
+                            <select class="form-control" id="age">
+                                <option value="<40">&lt;40</option>
+                                <option value="≥ 40 &lt; 60">&ge; 40 &lt; 60</option>
+                                <option value="≥ 60">&ge; 60</option>
+                              </select>                      
+                            <div class="error-icon" id="ageError" data-toggle="tooltip"
+                                title="Please select an age range"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="deductions">Enter total applicable deductions:</label>
+                            <input type="number" class="form-control" id="deductions"
+                                placeholder="Add total applicable deductions" pattern="[0-9]*" />
+                            <div class="error-icon" id="deductionsError" data-toggle="tooltip"
+                                title="Please enter a valid number">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" >Submit</button>
+                    </form> 
+                </div>
+
+                <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="resultModalLabel">
+                                    Tax Calculation Result
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" id="resultBody">
+                                <!-- Results will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.error-icon {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .tax-calculator-container {
+    max-width: 500px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    /* margin-top: 5px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
